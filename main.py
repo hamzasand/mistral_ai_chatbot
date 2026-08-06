@@ -56,16 +56,10 @@ parser = StrOutputParser()
 chain = prompt | llm | parser
 
 
-print("-----Welcome to the ai chatbot-----")
-print("-----Type 'exit' to quit -----")
-
-while True:
-    question = input("You: ")
-    if question == "exit":
-        break
-
-    response = chain.invoke(
-       {"context": context,
-        "question": question} 
+def ask_chatbot(question: str):
+    return chain.invoke(
+        {
+            "context": context,
+            "question": question,
+        }
     )
-    print(f"\nBot: {response}\n")
