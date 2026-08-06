@@ -1,0 +1,119 @@
+# =========================
+# Python
+# =========================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.pyd
+*.pyo
+
+# =========================
+# Virtual Environments
+# =========================
+myenv/
+
+# =========================
+# Environment Variables
+# =========================
+.env
+
+# =========================
+# Jupyter Notebook
+# =========================
+.ipynb_checkpoints/
+
+# =========================
+# Build / Distribution
+# =========================
+build/
+dist/
+*.egg-info/
+.eggs/
+*.egg
+
+# =========================
+# Logs
+# =========================
+*.log
+logs/
+log/
+
+# =========================
+# Testing
+# =========================
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+.mypy_cache/
+.ruff_cache/
+
+# =========================
+# IDEs
+# =========================
+.vscode/
+.idea/
+*.code-workspace
+
+# =========================
+# OS Files
+# =========================
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# =========================
+# AI / ML Models
+# =========================
+models/
+checkpoints/
+weights/
+*.ckpt
+*.pt
+*.pth
+*.onnx
+*.h5
+*.keras
+*.pb
+
+# =========================
+# Data
+# =========================
+data/
+datasets/
+*.csv
+*.parquet
+*.feather
+*.db
+*.sqlite
+*.sqlite3
+
+# Keep sample files
+!data/.gitkeep
+
+# =========================
+# Vector Databases
+# =========================
+chroma/
+chromadb/
+faiss_index/
+vectorstore/
+vectorstores/
+*.faiss
+
+# =========================
+# Cache
+# =========================
+.cache/
+.cache/*
+temp/
+tmp/
+
+# =========================
+# LangChain / AI
+# =========================
+.langsmith/
+.langgraph/
