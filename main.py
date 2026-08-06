@@ -1,0 +1,71 @@
+from dotenv import load_dotenv
+from langchain_mistralai import ChatMistralAI
+from langchain_core.prompts import ChatPromptTemplate
+from langchain_core.output_parsers import StrOutputParser
+load_dotenv()
+
+context = context = """
+My name is Muhammad Hamza.
+
+I am an AI Engineer with around 2.5 years of professional experience.
+
+Currently, I work at Prismatics Technologies.
+
+My expertise includes:
+- Python
+- Machine Learning
+- Deep Learning
+- Large Language Models (LLMs)
+- Generative AI
+- LangChain
+- LangGraph
+- Retrieval-Augmented Generation (RAG)
+- Multi-Agent AI Systems
+- FastAPI
+- Docker
+
+I have experience building AI-powered chatbots, document question-answering systems, and automation solutions using LangChain and modern LLMs.
+
+I enjoy learning new AI technologies and solving real-world business problems using artificial intelligence.
+
+My goal is to become an expert AI Engineer specializing in Generative AI and Agentic AI systems.
+"""
+
+llm = ChatMistralAI(
+    model="mistral-large-latest",
+    temperature=0 )
+
+prompt = ChatPromptTemplate.from_template(
+    """ You are a helpful AI assistant.
+
+Answer ONLY using the context below.
+
+If the answer is not found in the context, respond:
+"I don't know based on the provided context."
+
+Context:
+{context}
+
+Question:
+{question}
+"""
+)
+
+parser = StrOutputParser()
+
+chain = prompt | llm | parser
+
+
+print("-----Welcome to the ai chatbot-----")
+print("-----Type 'exit' to quit -----")
+
+while True:
+    question = input("You: ")
+    if question == "exit":
+        break
+
+    response = chain.invoke(
+       {"context": context,
+        "question": question} 
+    )
+    print(f"\nBot: {response}\n")
