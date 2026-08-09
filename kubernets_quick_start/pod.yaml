@@ -1,13 +1,15 @@
-apiVesrsion: v1
+apiVersion: v1
 kind: Pod
+
 metadata:
   name: myapp
   labels:
     name: myapp
     environment: prod
+
 spec:
   containers:
-  - name: myapp
-    image: hamzasand/custom-nginx
-    ports:
-      - containerPort: 80
+    - name: myapp
+      image: hamzasand/custom-nginx
+      ports:
+        - containerPort: 80
