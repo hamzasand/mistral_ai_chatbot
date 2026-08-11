@@ -33,7 +33,7 @@ My goal is to become an expert AI Engineer specializing in Generative AI and Age
 llm = ChatMistralAI(
     model="mistral-large-latest",
     temperature=0,
-    api_key=os.getenv("MISTRAL_API_KEY")
+    api_key=os.getenv("API_KEY")
 )
 
 prompt = ChatPromptTemplate.from_template(
