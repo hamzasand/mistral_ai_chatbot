@@ -1,7 +1,6 @@
 from fastapi import FastAPI
 
 from pydantic import BaseModel
-
 from main import ask_chatbot
 import uvicorn
 
