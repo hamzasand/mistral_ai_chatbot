@@ -8,6 +8,7 @@ import uvicorn
 
 app = FastAPI(
     title ="Simple ChatBot API",
+    
     vesrion = "1.0"
 )
 
