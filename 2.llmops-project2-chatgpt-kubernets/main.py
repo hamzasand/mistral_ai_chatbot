@@ -1,5 +1,4 @@
 import os
-
 from langchain_mistralai import ChatMistralAI
 
 from langchain_core.prompts import ChatPromptTemplate
